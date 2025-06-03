@@ -135,6 +135,34 @@
             </section>
         {{/displaymarketingbox}}
 
+        {{#displayuniversitylogo}}
+            <section id="feature">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 my-3">
+                            <h3 class="h1 mt-3 mb-3">{{{universityheading}}}</h3>
+                            <div class="university-content">{{{universitycontent}}}</div>
+                        </div>
+                        <div class="col-lg-8 ps-xl-8">
+                            <div class="row">
+                                {{#universitylogos}}
+                                    <div class="col-sm-6 mt-4">
+                                        <div class="card card-body shadow">
+                                            <div class="d-flex">
+                                                <div class="icon-lg text-white rounded-circle">
+                                                    <img src="{{{icon}}}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{/universitylogos}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {{/displayuniversitylogo}}
+
         {{#numbersfrontpage}}
             <section id="numbers">
                 <div class="moove-container-fluid">
@@ -149,7 +177,7 @@
                                 <div class="col-sm-6 col-xs-8">
                                     <div class="h-100 rate-box bg-primary">
                                         <h3>
-                                            {{{numbersusers}}}
+                                            2{{{numbersusers}}}
                                         </h3>
                                         <p>{{#str}}numbersusers, theme_moove{{/str}}</p>
                                     </div>
