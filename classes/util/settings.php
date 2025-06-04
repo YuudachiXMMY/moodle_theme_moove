@@ -45,8 +45,7 @@ class settings {
         'loginbg',
         'sliderimage1', 'sliderimage2', 'sliderimage3', 'sliderimage4', 'sliderimage5', 'sliderimage6',
         'sliderimage7', 'sliderimage8', 'sliderimage9', 'sliderimage10', 'sliderimage11', 'sliderimage12',
-        'marketing1icon', 'marketing2icon', 'marketing3icon', 'marketing4icon',
-        'universitylogo1icon', 'universitylogo2icon', 'universitylogo3icon', 'universitylogo4icon'
+        'marketing1icon', 'marketing2icon', 'marketing3icon', 'marketing4icon'
     ];
 
     /**
@@ -125,7 +124,6 @@ class settings {
         return array_merge(
             $this->frontpage_slideshow(),
             $this->frontpage_marketingboxes(),
-            $this->frontpage_universitylogos(),
             $this->frontpage_numbers(),
             $this->faq()
         );
@@ -186,28 +184,6 @@ class settings {
                 $templatecontext['marketingboxes'][$j]['content'] = $this->$marketingcontent ?
                     format_text($this->$marketingcontent, FORMAT_HTML) :
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.';
-            }
-        }
-
-        return $templatecontext;
-    }
-
-    /**
-     * Get config theme slideshow
-     *
-     * @return array
-     */
-    public function frontpage_universitylogos() {
-        if ($templatecontext['displayuniversitylogo'] = $this->displayuniversitylogo) {
-            $templatecontext['universityheading'] = format_text($this->universityheading, FORMAT_HTML);
-            $templatecontext['universitycontent'] = format_text($this->universitycontent, FORMAT_HTML);
-
-            $defaultimage = new \moodle_url('/theme/moove/pix/default_markegingicon.svg');
-
-            for ($i = 1, $j = 0; $i < 5; $i++, $j++) {
-                $marketingicon = 'university' . $i . 'icon';
-
-                $templatecontext['universitylogos'][$j]['icon'] = $this->$marketingicon ?: $defaultimage->out();
             }
         }
 

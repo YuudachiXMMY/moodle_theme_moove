@@ -292,57 +292,6 @@ if ($ADMIN->fulltree) {
         $page->add($setting);
     }
 
-    // Enable or disable university logos
-    $name = 'theme_moove/displayuniversitylogo';
-    $title = get_string('displayuniversitylogos', 'theme_moove');
-    $description = get_string('displayuniversitylogosdesc', 'theme_moove');
-    $default = 1;
-    $choices = array(0 => get_string('no'), 1 => get_string('yes'));
-    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
-    $page->add($setting);
-
-    $displayuniversitylogo = get_config('theme_moove', 'displayuniversitylogo');
-
-    if ($displayuniversitylogo) {
-        // universitylogo heading
-        $name = 'theme_moove/universitylogoheading';
-        $title = get_string('universitylogosectionheading', 'theme_moove');
-        $default = 'Awesome App Features';
-        $setting = new admin_setting_configtext($name, $title, '', $default);
-        $page->add($setting);
-
-        // University Logo content.
-        $name = 'theme_moove/universitylogocontent';
-        $title = get_string('universitylogocontent', 'theme_moove');
-        $default = 'Moove is a Moodle template based on Boost with modern and creative design.';
-        $setting = new admin_setting_confightmleditor($name, $title, '', $default);
-        $page->add($setting);
-
-        for ($i = 1; $i < 5; $i++) {
-            $filearea = "university{$i}icon";
-            $name = "theme_moove/$filearea";
-            $title = get_string('universityicon', 'theme_moove', $i . '');
-            $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
-            $setting = new admin_setting_configstoredfile($name, $title, '', $filearea, 0, $opts);
-            $page->add($setting);
-
-            $name = "theme_moove/university{$i}heading";
-            $title = get_string('universityheading', 'theme_moove', $i . '');
-            $default = 'Lorem';
-            $setting = new admin_setting_configtext($name, $title, '', $default);
-            $page->add($setting);
-
-            $name = "theme_moove/university{$i}content";
-            $title = get_string('universitycontent', 'theme_moove', $i . '');
-            $default = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.';
-            $setting = new admin_setting_confightmleditor($name, $title, '', $default);
-            $page->add($setting);
-        }
-
-        $setting = new admin_setting_heading('displayuniversitylogoseparator', '', '<hr>');
-        $page->add($setting);
-    }
-
     // Enable or disable Numbers sections settings.
     $name = 'theme_moove/numbersfrontpage';
     $title = get_string('numbersfrontpage', 'theme_moove');

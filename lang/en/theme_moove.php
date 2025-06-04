@@ -83,15 +83,6 @@ $string['marketingicon'] = 'Marketing Icon {$a}';
 $string['marketingheading'] = 'Marketing Heading {$a}';
 $string['marketingcontent'] = 'Marketing Content {$a}';
 
-// Frontpage University logo settings tab.
-$string['displayuniversitylogos'] = 'Show front page University logo';
-$string['displayuniversitylogosdesc'] = 'If you want to see the logos, select yes <strong>then click SAVE</strong> to load the input fields.';
-$string['universitylogosectionheading'] = 'University logo section heading title';
-$string['universitylogocontent'] = 'University logo section content';
-$string['universityicon'] = 'University logo Icon {$a}';
-$string['universityheading'] = 'University logo Heading {$a}';
-$string['universitycontent'] = 'University logo Content {$a}';
-
 $string['disableteacherspic'] = 'Disable teachers picture';
 $string['disableteacherspicdesc'] = 'This setting hides the teachers\' pictures from the course cards.';
 
@@ -116,15 +107,6 @@ $string['numbersfrontpagecontentdefault'] = '<h2>Trusted by 25,000+ happy custom
                         within few minutes.</p>';
 $string['numbersusers'] = 'Active users accessing our amazing resources';
 $string['numberscourses'] = 'Courses made for you that you can trust!';
-
-$string['universitieslider'] = 'Show universities slider';
-$string['universitiesliderdesc'] = 'If enabled, display the universities slider in the frontpage.';
-$string['universitieslidercontent'] = 'Universities slider content';
-$string['universitieslidercontentdesc'] = 'You can add any text to the left side of the universities slider';
-$string['universitieslidercontentdefault'] = '<h2>Trusted by 25,000+ happy customers.</h2>
-                    <p>With lots of unique blocks, you can easily build <br class="d-none d-sm-block d-md-none d-xl-block">
-                        a page without coding. Build your next website <br class="d-none d-sm-block d-md-none d-xl-block">
-                        within few minutes.</p>';
 
 $string['faq'] = 'FAQ';
 $string['faqcount'] = 'FAQ questions';
