@@ -128,131 +128,120 @@
     .marquee {
         display: flex;
         block-size: var(--marquee-item-height);
+        margin-block: var(--marquee-item-height);
         position: relative;
-
-        _overflow-x: hidden;
-        _mask-image: linear-gradient(
+        overflow-x: hidden;
+        mask-image: linear-gradient(
             to right,
             hsl(0 0% 0% / 0),
             hsl(0 0% 0% / 1) 20%,
             hsl(0 0% 0% / 1) 80%,
             hsl(0 0% 0% / 0)
         );
-
-        margin-inline: auto;
-        max-inline-size: 90vw;
     }
 
-    .marquee--6 {
-    --marquee-item-width: 166px;
-    --marquee-item-height: 100px;
-    --marquee-duration: 32s;
-    --marquee-items: 9;
+    .marquee--8 {
+        --marquee-item-width: 100px;
+        --marquee-item-height: 100px;
+        --marquee-duration: 36s;
+        --marquee-items: 8;
     }
 
     .marquee__item {
-    --marquee-item-offset: max(
-        calc(var(--marquee-item-width) * var(--marquee-items)),
-        calc(100% + var(--marquee-item-width))
-    );
-    --marquee-delay: calc(var(--marquee-duration) / var(--marquee-items) * (var(--marquee-items) - var(--marquee-item-index)) * -1);
-    position: absolute;
-    inset-inline-start: var(--marquee-item-offset);
-    transform: translateX(-50%);
-    animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
-    }
-
-    .marquee--omega .marquee__item {
-    transform: none;
+        --marquee-item-offset: max(
+            calc(var(--marquee-item-width) * var(--marquee-items)),
+            calc(100% + var(--marquee-item-width))
+        );
+        --marquee-delay: calc(var(--marquee-duration) / var(--marquee-items) * (var(--marquee-items) - var(--marquee-item-index)) * -1);
+        position: absolute;
+        inset-inline-start: var(--marquee-item-offset);
+        transform: translateX(-50%);
+        animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
     }
 
     .marquee__item:nth-child(4n) {
-    border-top-right-radius: 1rem;
+        border-top-right-radius: 1rem;
     }
 
     .marquee__item:nth-child(4n + 1) {
-    border-bottom-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
     }
 
     .marquee__item:nth-child(4n + 2) {
-    border-bottom-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
     }
 
     .marquee__item:nth-child(4n + 3) {
-    border-top-left-radius: 1rem;
+        border-top-left-radius: 1rem;
     }
 
-    .marquee--6 .marquee__item:nth-of-type(1) {
-    --marquee-item-index: 1;
+    .marquee--8 .marquee__item:nth-of-type(1) {
+        --marquee-item-index: 1;
     }
 
-    .marquee--6 .marquee__item:nth-of-type(2) {
-    --marquee-item-index: 2;
+    .marquee--8 .marquee__item:nth-of-type(2) {
+        --marquee-item-index: 2;
     }
 
-    .marquee--6 .marquee__item:nth-of-type(3) {
-    --marquee-item-index: 3;
+    .marquee--8 .marquee__item:nth-of-type(3) {
+        --marquee-item-index: 3;
     }
 
-    .marquee--6 .marquee__item:nth-of-type(4) {
-    --marquee-item-index: 4;
+    .marquee--8 .marquee__item:nth-of-type(4) {
+        --marquee-item-index: 4;
     }
 
-    .marquee--6 .marquee__item:nth-of-type(5) {
-    --marquee-item-index: 5;
+    .marquee--8 .marquee__item:nth-of-type(5) {
+        --marquee-item-index: 5;
     }
 
-    .marquee--6 .marquee__item:nth-of-type(6) {
-    --marquee-item-index: 6;
+    .marquee--8 .marquee__item:nth-of-type(6) {
+        --marquee-item-index: 6;
     }
 
-    .marquee--6 .marquee__item:nth-of-type(7) {
-    --marquee-item-index: 7;
+    .marquee--8 .marquee__item:nth-of-type(7) {
+        --marquee-item-index: 7;
     }
 
-    .marquee--6 .marquee__item:nth-of-type(8) {
-    --marquee-item-index: 8;
+    .marquee--8 .marquee__item:nth-of-type(8) {
+        --marquee-item-index: 8;
     }
 
-    .marquee--6 .marquee__item:nth-of-type(9) {
-    --marquee-item-index: 9;
+    .marquee--8 .marquee__item:nth-of-type(9) {
+        --marquee-item-index: 9;
     }
 
     @keyframes go {
-    to {
-        inset-inline-start: calc(var(--marquee-item-width) * -1);
-    }
-    }
-
-    .pause:hover .marquee__item {
-    animation-play-state: paused;
+        to {
+            inset-inline-start: calc(var(--marquee-item-width) * -1);
+        }
     }
 
     @media (max-width: 767px) {
-      .marquee {
-        max-inline-size: 100vw;
-        min-height: 70px;
-        height: auto;
-        padding: 0 8px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        animation: none !important;
-      }
-      .marquee__item {
-        position: static !important;
-        width: 80px !important;
-        height: 50px !important;
-        min-width: 60px;
-        max-width: 100px;
-        flex-shrink: 0;
-        object-fit: contain;
-        animation: none !important;
-        margin: 0;
-      }
+        .marquee {
+            max-inline-size: 100vw;
+            min-height: 70px;
+            height: auto;
+            padding: 0 8px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            animation: none !important;
+        }
+        .marquee__item {
+            position: static !important;
+            width: 80px !important;
+            height: 50px !important;
+            min-width: 60px;
+            max-width: 100px;
+            flex-shrink: 0;
+            object-fit: contain;
+            animation: none !important;
+            margin: 0;
+        }
     }
 </style>
 
@@ -345,16 +334,16 @@
             <div class="container mx-auto px-4">
             <h3 class="text-2xl font-bold text-blue-900 mb-8 text-center">Recognized By Leading Universities</h3>
             <div class="pause">
-                <div class="marquee marquee--6">
-                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo1.png" alt="University Logo 1"  class="marquee__item" width="150" height="100">
-                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo2.png" alt="University Logo 2"  class="marquee__item" width="150" height="100">
-                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo3.png" alt="University Logo 3"  class="marquee__item" width="150" height="100">
-                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo4.png" alt="University Logo 4"  class="marquee__item" width="150" height="100">
-                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo5.png" alt="University Logo 5"  class="marquee__item" width="150" height="100">
-                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo6.png" alt="University Logo 6"  class="marquee__item" width="150" height="100">
-                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo7.png" alt="University Logo 7"  class="marquee__item" width="150" height="100">
-                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo8.jpg" alt="University Logo 8"  class="marquee__item" width="150" height="100">
-                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo9.png" alt="University Logo 9"  class="marquee__item" width="150" height="100">
+                <div class="marquee marquee--8">
+                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo1.png" alt="University Logo 1"  class="marquee__item" width="100" height="100">
+                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo2.png" alt="University Logo 2"  class="marquee__item" width="100" height="100">
+                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo3.png" alt="University Logo 3"  class="marquee__item" width="100" height="100">
+                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo4.png" alt="University Logo 4"  class="marquee__item" width="100" height="100">
+                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo5.png" alt="University Logo 5"  class="marquee__item" width="100" height="100">
+                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo6.png" alt="University Logo 6"  class="marquee__item" width="100" height="100">
+                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo7.png" alt="University Logo 7"  class="marquee__item" width="100" height="100">
+                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo8.jpg" alt="University Logo 8"  class="marquee__item" width="100" height="100">
+                <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo9.png" alt="University Logo 9"  class="marquee__item" width="100" height="100">
                 </div>
             </div>
 
