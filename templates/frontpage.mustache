@@ -55,6 +55,13 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
+    #page-site-index.notloggedin #topofscroll {
+        background : white;
+    }
+    #page-site-index.notloggedin #topofscroll #page-content, #page-site-index.notloggedin #topofscroll #region-main {
+        background : white
+    }
+
     /* Hide Premium High School H1 */
     h1 {
         display: none;
@@ -137,7 +144,7 @@
     --marquee-item-width: 166px;
     --marquee-item-height: 100px;
     --marquee-duration: 32s;
-    --marquee-items: 6;
+    --marquee-items: 9;
     }
 
     .marquee__item {
@@ -194,6 +201,18 @@
 
     .marquee--6 .marquee__item:nth-of-type(6) {
     --marquee-item-index: 6;
+    }
+
+    .marquee--6 .marquee__item:nth-of-type(7) {
+    --marquee-item-index: 7;
+    }
+
+    .marquee--6 .marquee__item:nth-of-type(8) {
+    --marquee-item-index: 8;
+    }
+
+    .marquee--6 .marquee__item:nth-of-type(9) {
+    --marquee-item-index: 9;
     }
 
     @keyframes go {
@@ -537,7 +556,7 @@
                 905-615-1011 &nbsp;|&nbsp; info@tiaschools.com
             </div>
             <div class="text-sm mt-2 md:mt-0">
-                © 2024 Toronto International Academy. All rights reserved.
+                © 2025 Toronto International Academy. All rights reserved.
             </div>
             </div>
         </footer>
