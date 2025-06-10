@@ -41,6 +41,16 @@
         }
     }
 }}
+<style>
+    @media (hover: hover) {
+        @supports (color:color-mix(in oklab,black,black)) {
+            .btn {
+                background-color: white;
+                border-color: black;
+            }
+        }
+    }
+</style>
 <div class="langmenu">
     <div class="dropdown show">
         <a href="#" role="button" id="lang-menu-toggle" data-toggle="dropdown" aria-label="{{#str}}language{{/str}}" aria-haspopup="true" aria-controls="lang-action-menu" class="btn dropdown-toggle">

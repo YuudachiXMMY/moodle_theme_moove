@@ -1,4 +1,3 @@
-
 {{!
     This file is part of Moodle - http://moodle.org/
 
@@ -70,6 +69,18 @@
         display: none;
     }
 
+    /* Adjust carousel indicators */
+    .carousel-indicators {
+        margin-right: 45%;
+        margin-left: 45%;
+    }
+
+    @media (max-width: 767px) {
+        .carousel-indicators {
+            display:none;
+        }
+    }
+
     /* Adjust Left and Right margin for independent HTML sections */
     .py-16 {
         margin-left : -15px;
@@ -113,6 +124,7 @@
     @media (hover: hover) {
         @supports (color:color-mix(in oklab,black,black)) {
             .btn {
+                color: black;
                 background-color: #1787fc; /* Darker blue for hover */
                 border-color: #1787fc; /* Match border to background */
             }
@@ -128,7 +140,7 @@
     .marquee {
         display: flex;
         block-size: var(--marquee-item-height);
-        margin-block: var(--marquee-item-height);
+        margin-block: calc(var(--marquee-item-height) * 0.25);
         position: relative;
         overflow-x: hidden;
         mask-image: linear-gradient(
@@ -243,6 +255,17 @@
             margin: 0;
         }
     }
+
+    /* Overlay PNG between background color and text for #feature */
+    #feature {
+        /* First: background color, then PNG overlay */
+        background:
+            linear-gradient(to bottom, #f2f6fc, #f2f6fc),
+            url('https://www.tiaschools.online/theme/moove/pix/backgrounds/overlay.png') center center/cover no-repeat;
+        background-size:cover
+        position: relative;
+        z-index: 1;
+    }
 </style>
 
 <body {{{ bodyattributes }}}>
@@ -330,9 +353,9 @@
         {{/displaymarketingbox}}
 
         <!-- Section: University Logos -->
-        <section class="py-16 bg-white">
+        <section class="py-16 bg-white" style="padding-top: 2rem; padding-bottom: 0rem;">
             <div class="container mx-auto px-4">
-            <h3 class="text-2xl font-bold text-blue-900 mb-8 text-center">Recognized By Leading Universities</h3>
+            <h3 class="text-2xl font-bold text-black mb-8 text-center">Recognized By Leading Universities</h3>
             <div class="pause">
                 <div class="marquee marquee--8">
                 <img src="https://www.tiaschools.online/theme/moove/pix/university_logo/logo1.png" alt="University Logo 1"  class="marquee__item" width="100" height="100">
@@ -363,7 +386,7 @@
                     <path d="M8 16l-2 5 6-3 6 3-2-5" stroke="#000000" stroke-width="2" fill="none"></path>
                 </svg>
                 <h4 class="font-semibold text-lg text-[#000000] mb-2">Proven Track Record</h4>
-                <p class="text-gray-600">TIA is fully inspected by the Ontario Ministry of Education, and has offered Ontario Secondary School Diploma credits since 2004.</p>
+                <p class="text-gray-600">TIA is a Ministry-inspected private high school with a proven track record of excellence since 2004. Backed by solid data and student success stories, we offer premium online education tailored to today’s learners.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
@@ -398,9 +421,7 @@
                     <path d="M12 7v5l4 2" stroke="#000000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
                 <h4 class="font-semibold text-lg text-[#000000] mb-2">Flexible Schedule</h4>
-                <p class="text-[#000000]">Study at your own pace and meet your teachers virtually to review course materials. Support is available 24/7 using Telegram Messenger.
-                <br>
-                While the program is flexible, we recommend following our suggested timeline to stay on track and achieve the best academic results.</p>
+                <p class="text-[#000000]">Learn at your own pace with your teacher support. 24/7 help is available via Telegram and email messages. For optimal results, we recommend following our suggested timeline.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
@@ -410,7 +431,7 @@
                     <path d="M2 19h20" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
                 </svg>
                 <h4 class="font-semibold text-lg text-[#000000] mb-2">Over 70 Online Credit Courses</h4>
-                <p class="text-gray-600">Our extensive selection of online credit courses focuses on core academic subjects. Designed with university preparation in mind, these courses help students build the essential skills and knowledge needed to succeed in post-secondary education.</p>
+                <p class="text-gray-600">Our extensive online courses focus on key academic subjects and are designed to prepare students for university and colleges by building essential skills and knowledge.</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center">
@@ -540,14 +561,14 @@
         <!-- Footer -->
         <footer class="bg-[#000000] text-[#FAED23] py-8">
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-            <div class="flex items-center space-x-2 mb-4 md:mb-0">
+            <div class="flex items-center space-x-2 md:mb-0">
                 <img src="https://static.showit.co/200/Gsh00icqQnqzC2LilPTpPQ/188378/tia-logo.png" alt="TIA logo" class="h-8 w-auto" />
                 <span class="font-bold text-lg">Toronto International Academy</span>
             </div>
             <div class="text-sm">
                 905-615-1011 &nbsp;|&nbsp; info@tiaschools.com
             </div>
-            <div class="text-sm mt-2 md:mt-0">
+            <div class="text-sm md:mt-0">
                 © 2025 Toronto International Academy. All rights reserved.
             </div>
             </div>
