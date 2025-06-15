@@ -82,6 +82,14 @@ $string['marketingsectioncontent'] = 'Marketing section content';
 $string['marketingicon'] = 'Marketing Icon {$a}';
 $string['marketingheading'] = 'Marketing Heading {$a}';
 $string['marketingcontent'] = 'Marketing Content {$a}';
+// Frontpage settings tab.
+$string['displaywhyusboxes'] = 'Show front page whyus boxes';
+$string['displaywhyusesdesc'] = 'If you want to see the boxes, select yes <strong>then click SAVE</strong> to load the input fields.';
+$string['whyussectionheading'] = 'whyus section heading title';
+$string['whyussectioncontent'] = 'whyus section content';
+$string['whyusicon'] = 'whyus Icon {$a}';
+$string['whyusheading'] = 'whyus Heading {$a}';
+$string['whyuscontent'] = 'whyus Content {$a}';
 
 $string['disableteacherspic'] = 'Disable teachers picture';
 $string['disableteacherspicdesc'] = 'This setting hides the teachers\' pictures from the course cards.';

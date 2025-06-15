@@ -124,6 +124,7 @@ class settings {
         return array_merge(
             $this->frontpage_slideshow(),
             $this->frontpage_marketingboxes(),
+            $this->frontpage_whyusboxes(),
             $this->frontpage_numbers(),
             $this->faq()
         );
@@ -183,6 +184,36 @@ class settings {
                     format_text($this->$marketingheading, FORMAT_HTML) : 'Lorem';
                 $templatecontext['marketingboxes'][$j]['content'] = $this->$marketingcontent ?
                     format_text($this->$marketingcontent, FORMAT_HTML) :
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.';
+            }
+        }
+
+        return $templatecontext;
+    }
+    /**
+     * Get config theme slideshow
+     *
+     * @return array
+     */
+    public function frontpage_whyusboxes() {
+        if ($templatecontext['displaywhyusbox'] = $this->displaywhyusbox) {
+            $templatecontext['whyusheading'] = format_text($this->whyusheading, FORMAT_HTML);
+            $templatecontext['whyuscontent'] = format_text($this->whyuscontent, FORMAT_HTML);
+
+            $defaultimage = new \moodle_url('/theme/moove/pix/default_markegingicon.svg');
+
+            for ($i = 1; $i < 7; $i++) {
+                $whyusicon = 'whyus' . $i . 'icon';
+                $whyusheading = 'whyus' . $i . 'heading';
+                $whyuscontent = 'whyus' . $i . 'content';
+
+                $templatecontext['whyus'.($i).'icon'] = $this->$whyusicon ?
+                    format_text($this->$whyusicon, FORMAT_HTML) :
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.';
+                $templatecontext['whyus'.($i).'heading'] = $this->$whyusheading ?
+                    format_text($this->$whyusheading, FORMAT_HTML) : 'Lorem';
+                $templatecontext['whyus'.($i).'content'] = $this->$whyuscontent ?
+                    format_text($this->$whyuscontent, FORMAT_HTML) :
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.';
             }
         }

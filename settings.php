@@ -292,6 +292,57 @@ if ($ADMIN->fulltree) {
         $page->add($setting);
     }
 
+    #D isplay Why us sections settings
+    $name = 'theme_moove/displaywhyusbox';
+    $title = get_string('displaywhyusboxes', 'theme_moove');
+    $description = get_string('displaywhyusboxesdesc', 'theme_moove');
+    $default = 1;
+    $choices = array(0 => get_string('no'), 1 => get_string('yes'));
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $page->add($setting);
+
+    $displaywhyusbox = get_config('theme_moove', 'displaywhyusbox');
+
+    if ($displaywhyusbox) {
+        // whyusheading.
+        $name = 'theme_moove/whyusheading';
+        $title = get_string('whyussectionheading', 'theme_moove');
+        $default = 'Awesome App Features';
+        $setting = new admin_setting_configtext($name, $title, '', $default);
+        $page->add($setting);
+
+        // whyuscontent.
+        $name = 'theme_moove/whyuscontent';
+        $title = get_string('whyussectioncontent', 'theme_moove');
+        $default = 'Moove is a Moodle template based on Boost with modern and creative design.';
+        $setting = new admin_setting_confightmleditor($name, $title, '', $default);
+        $page->add($setting);
+
+        for ($i = 1; $i < 7; $i++) {
+            $filearea = "whyus{$i}icon";
+            $name = "theme_moove/$filearea";
+            $title = get_string('whyusicon', 'theme_moove', $i . '');
+            $default = 'fa-line-chart';
+            $setting = new admin_setting_configtext($name, $title, '', $default);
+            $page->add($setting);
+
+            $name = "theme_moove/whyus{$i}heading";
+            $title = get_string('whyusheading', 'theme_moove', $i . '');
+            $default = 'Lorem';
+            $setting = new admin_setting_configtext($name, $title, '', $default);
+            $page->add($setting);
+
+            $name = "theme_moove/whyus{$i}content";
+            $title = get_string('whyuscontent', 'theme_moove', $i . '');
+            $default = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.';
+            $setting = new admin_setting_confightmleditor($name, $title, '', $default);
+            $page->add($setting);
+        }
+
+        $setting = new admin_setting_heading('displaywhyusboxseparator', '', '<hr>');
+        $page->add($setting);
+    }
+
     // Enable or disable Numbers sections settings.
     $name = 'theme_moove/numbersfrontpage';
     $title = get_string('numbersfrontpage', 'theme_moove');

@@ -1130,13 +1130,12 @@ button:active {
         </section>
 
         <!-- Section: Why Choose TIA? -->
-        {{#displaywhyusbox}}
         <section class="why-us mt-40 bg-[#ffffff]">
             <div class="container">
                 <!-- START why-us SECTION TITLE -->
                 <div class="why-us_title text-center">
-                    <h2 class="heading-primary text-center mb-5">{{{whyusheading}}}</h2>
-                    <p class="mb-5">{{{whyuscontent}}}</p>
+                    <h2 class="heading-primary text-center mb-5">Why Choose TIA?</h2>
+                    <p class="mb-5"></p>
                 </div>
                 <!-- END why-us SECTION TITLE -->
 
@@ -1148,11 +1147,21 @@ button:active {
                             <div class="col-lg-12 col-md-6 col-sm-10 mx-auto">
                                 <div class="content-box text-center">
                                     <div class="content-box-icon">
-                                        <i class="fa {{{whyus1icon}}} fa-2x"></i>
+                                        <i class="fa fa-line-chart fa-2x"></i>
                                     </div>
-                                    <h5 class="heading-secondary">{{{whyus1heading}}}</h5>
-                                    <p>
-                                        {{{whyus1content}}}
+                                    <h5 class="heading-secondary">
+                                    {mlang en} Proven Track Record {mlang}
+                                    {mlang zh_cn} {mlang}
+                                    {mlang zh_tw} {mlang}
+                                    {mlang vi} {mlang}
+                                    {mlang ko} {mlang}
+                                    </h5>
+                                    <p>.
+                                        {mlang en} TIA is a Ministry-inspected private high school with a proven track record of excellence since 2004. Backed by solid data and student success stories, we offer premium online education tailored to today's learners {mlang}
+                                        {mlang zh_cn} {mlang}
+                                        {mlang zh_tw} {mlang}
+                                        {mlang vi} {mlang}
+                                        {mlang ko} {mlang}
                                     </p>
                                 </div>
                             </div>
@@ -1162,11 +1171,21 @@ button:active {
                             <div class="col-lg-12 col-md-6 col-sm-10 mx-auto">
                                 <div class="content-box text-center">
                                     <div class="content-box-icon">
-                                        <i class="fa {{{whyus2icon}}} fa-2x"></i>
+                                        <i class="fa fa-clock-o fa-2x"></i>
                                     </div>
-                                    <h5 class="heading-secondary">{{{whyus2heading}}}</h5>
+                                    <h5 class="heading-secondary">
+                                    {mlang en} Flexible Schedule {mlang}
+                                    {mlang zh_cn} {mlang}
+                                    {mlang zh_tw} {mlang}
+                                    {mlang vi} {mlang}
+                                    {mlang ko} {mlang}
+                                    </h5>
                                     <p>
-                                        {{{whyus2content}}}
+                                        {mlang en} Learn at your own pace with your teacher support. 24/7 help is available via Telegram and email messages. For optimal results, we recommend following our suggested timeline. {mlang}
+                                        {mlang zh_cn} {mlang}
+                                        {mlang zh_tw} {mlang}
+                                        {mlang vi} {mlang}
+                                        {mlang ko} {mlang}
                                     </p>
                                 </div>
                             </div>
@@ -1182,11 +1201,21 @@ button:active {
                             <div class="col-lg-12 col-md-6 col-sm-10 mx-auto">
                                 <div class="content-box text-center">
                                     <div class="content-box-icon">
-                                        <i class="fa {{{whyus3icon}}} fa-2x"></i>
+                                        <i class="fa fa-university fa-2x"></i>
                                     </div>
-                                    <h5 class="heading-secondary">{{{whyus3heading}}}</h5>
+                                    <h5 class="heading-secondary">
+                                    {mlang en} Impeccable University Acceptance {mlang}
+                                    {mlang zh_cn} {mlang}
+                                    {mlang zh_tw} {mlang}
+                                    {mlang vi} {mlang}
+                                    {mlang ko} {mlang}
+                                    </h5>
                                     <p>
-                                        {{{whyus3content}}}
+                                        {mlang en} 95% of our graduates get accepted to top universities worldwide, and 2/3 of them receive scholarship offers. {mlang}
+                                        {mlang zh_cn} {mlang}
+                                        {mlang zh_tw} {mlang}
+                                        {mlang vi} {mlang}
+                                        {mlang ko} {mlang}
                                     </p>
                                 </div>
                             </div>
@@ -1196,11 +1225,21 @@ button:active {
                             <div class="col-lg-12 col-md-6 col-sm-10 mx-auto">
                                 <div class="content-box text-center">
                                     <div class="content-box-icon">
-                                        <i class="fa {{{whyus4icon}}} fa-2x"></i>
+                                        <i class="fa fa-graduation-cap fa-2x"></i>
                                     </div>
-                                    <h5 class="heading-secondary">{{{whyus4heading}}}</h5>
+                                    <h5 class="heading-secondary">
+                                    {mlang en} Over 70 Online Credit Courses {mlang}
+                                    {mlang zh_cn} {mlang}
+                                    {mlang zh_tw} {mlang}
+                                    {mlang vi} {mlang}
+                                    {mlang ko} {mlang}
+                                    </h5>
                                     <p>
-                                        {{{whyus4content}}}
+                                        {mlang en} Our extensive online courses focus on key academic subjects and are designed to prepare students for university and colleges by building essential skills and knowledge. {mlang}
+                                        {mlang zh_cn} {mlang}
+                                        {mlang zh_tw} {mlang}
+                                        {mlang vi} {mlang}
+                                        {mlang ko} {mlang}
                                     </p>
                                 </div>
                             </div>
@@ -1222,11 +1261,21 @@ button:active {
                             <div class="col-lg-12 col-md-6 col-sm-10 mx-auto">
                                 <div class="content-box text-center">
                                     <div class="content-box-icon">
-                                        <i class="fa {{{whyus5icon}}} fa-2x"></i>
+                                        <i class="fa fa-comments-o fa-2x"></i>
                                     </div>
-                                    <h5 class="heading-secondary">{{{whyus5heading}}}</h5>
+                                    <h5 class="heading-secondary">
+                                    {mlang en} Real Time Support {mlang}
+                                    {mlang zh_cn} {mlang}
+                                    {mlang zh_tw} {mlang}
+                                    {mlang vi} {mlang}
+                                    {mlang ko} {mlang}
+                                    </h5>
                                     <p>
-                                        {{{whyus5content}}}
+                                        {mlang en} Our Online platform is managed by a dedicated team of E-School teachers and counsellors. Students receive personalized, asynchronous one-on-one support throughout their learning journey. {mlang}
+                                        {mlang zh_cn} {mlang}
+                                        {mlang zh_tw} {mlang}
+                                        {mlang vi} {mlang}
+                                        {mlang ko} {mlang}
                                     </p>
                                 </div>
                             </div>
@@ -1236,11 +1285,21 @@ button:active {
                             <div class="col-lg-12 col-md-6 col-sm-10 mx-auto">
                                 <div class="content-box text-center">
                                     <div class="content-box-icon">
-                                        <i class="fa {{{whyus6icon}}} fa-2x"></i>
+                                        <i class="fa fa-users fa-2x"></i>
                                     </div>
-                                    <h5 class="heading-secondary">{{{whyus6heading}}}</h5>
+                                    <h5 class="heading-secondary">
+                                    {mlang en} Easy Transition from Online to In-Person {mlang}
+                                    {mlang zh_cn} {mlang}
+                                    {mlang zh_tw} {mlang}
+                                    {mlang vi} {mlang}
+                                    {mlang ko} {mlang}
+                                    </h5>
                                     <p>
-                                        {{{whyus6content}}}
+                                        {mlang en} At TIA, students can seamlessly transition from online learning to in-person classes. We offer flexible options to combine E-School and in-class courses to suit each student's unique academic plan. {mlang}
+                                        {mlang zh_cn} {mlang}
+                                        {mlang zh_tw} {mlang}
+                                        {mlang vi} {mlang}
+                                        {mlang ko} {mlang}
                                     </p>
                                 </div>
                             </div>
@@ -1251,7 +1310,6 @@ button:active {
                 </div>
             </div>
         </section>
-        {{/displaywhyusbox}}
 
         {{#displayuniversitylogo}}
             <section id="feature">
